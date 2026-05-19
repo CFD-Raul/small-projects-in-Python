@@ -19,9 +19,28 @@
 # Tip amount: $12.00
 # Total to pay: $132.00
 
+def get_gross_value():
+    while True:
+        try:
+            gross_value = float(input("Enter the bill gross amount: "))
+            print("Bill gross amount added successfully.")
+            return gross_value
+        except ValueError:
+            print("Enter only numbers, please.")
+
+def get_tip_rate():
+    while True:
+        try:
+            tip_rate = float(input("Enter the tip percentage: ")) /100
+            print("Tip percentage added successfully.")
+            return tip_rate
+        except ValueError:
+            print("Enter only numbers, please.")
+                    
+
 def percentage_calculator():
-    gross_value = float(input("Enter the bill gross amount: "))
-    tip_rate = float(input("Enter the tip percentage: ")) /100
+    gross_value = get_gross_value()
+    tip_rate = get_tip_rate()
     tip_amount = gross_value * tip_rate
     net_value = gross_value + tip_amount
     message = (f"""
