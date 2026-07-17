@@ -1,15 +1,15 @@
-# importanto modulo random
+# importing random module
 
 import random
 
-# criando a função do jogo de advinhar numeros
+# creating the number guessing game function
 
 def unknown_number_game():
-    # gerando numeoro secreto
+    # generating secret number
     unknown_number = random.randint(1, 100)
-    # contador de tentativas
+    # attempt counter
     users_attempts = 0
-    # estabelecendo o laço de repetição infinita
+    # establishing the infinite loop
     while True:
         try:
             user_attempt = int(input("Enter an integer between 1 and 100: "))
